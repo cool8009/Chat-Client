@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 //sets a default url for the agent
-axios.defaults.baseURL = "http://localhost:5000/api";
+axios.defaults.baseURL = "http://localhost:44312/api";
 //gets the response data to a variable called response body
 const responseBody = function (response) {
   return response.data;
@@ -23,7 +23,13 @@ const requests = {
 //makes a request to the api server
 const Messages = {
   list: function () {
-    return requests.get("/messages");
+    try {
+
+      return requests.get("/messages");
+    }
+    catch (e) {
+      console.log(e);
+    }
   },
   create: function (message) {
     return requests.post("/messages", message);

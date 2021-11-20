@@ -17,7 +17,7 @@ const App = () => {
   useEffect(() => {
     agent.Messages.list().then(response => {
       console.log(response);
-      setMessages(response);
+      setPrevMessages(response);
     })
   }, [])
   //create connection
