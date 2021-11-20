@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 //comp that desplay the message
 const MessageContainer = ({ messages, prevMessages }) => {
     const messageRef = useRef();
-    //TODO: TRY TO MAKE THIS WORK, FOR SOME REASON IT DOESNT FETCH MESSAGES FROM THE API 
+    //TODO: TRY TO MAKE THIS WORK, FOR SOME REASON IT DOESNT FETCH MESSAGES FROM THE API
     //to scroll when there are new messages
     useEffect(() => {
         if (messageRef && messageRef.current) {
